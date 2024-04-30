@@ -1,7 +1,7 @@
 <div class="listAgenda">
   <h1>Agenda</h1>
   <div *ngFor="let agenda of agendas">
-    <div (click)="goToContacts(agenda.id)" class="card">
+    <div (click)="goToContacts(agenda)" class="card">
       <h2>{{ agenda.label }}</h2>
       <p>{{ agenda.contacts.length }}</p>
     </div>

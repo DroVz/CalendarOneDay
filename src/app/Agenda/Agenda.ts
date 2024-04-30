@@ -6,7 +6,11 @@ export class Agenda {
 
   constructor(id: string, label: string) {
     this.id = id;
-    this.contacts = [];
+    this.contacts = [
+      new Contact('contact1'),
+      new Contact('contact2'),
+      new Contact('contact3'),
+    ];
     this.label = label;
   }
 

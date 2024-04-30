@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Agenda } from '../Agenda';
 import { Router } from '@angular/router';
+import { AgendaService } from '../agenda.service';
 
 @Component({
   selector: 'app-list-agenda',
@@ -13,15 +14,15 @@ import { Router } from '@angular/router';
 export class ListAgendaComponent {
   agendas: Agenda[];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private agendaService: AgendaService) {
     this.agendas = [];
-    this.agendas.push(new Agenda('1', 'Agenda 1'));
-    this.agendas.push(new Agenda('2', 'Agenda 2'));
-    this.agendas.push(new Agenda('3', 'Agenda 3'));
   }
-  ngOnInit() {}
 
-  goToContacts(agendaId: string) {
-    this.router.navigate(['/contacts', { agendaId }]);
+  ngOnInit() {
+    this.agendas = this.agendaService.getAgendas();
+  }
+
+  goToContacts(agenda: Agenda) {
+    this.router.navigate(['/contacts', agenda.id]);
   }
 }
