@@ -25,4 +25,6 @@ export class ListAgendaComponent {
   goToContacts(agenda: Agenda) {
     this.router.navigate(['/contacts', agenda.id]);
   }
+
+  createAgenda(): void {}
 }

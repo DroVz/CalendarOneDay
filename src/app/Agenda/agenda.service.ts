@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Agenda } from './Agenda';
+import { AGENDAS } from './mock-agenda';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AgendaService {
+  agendas: Agenda[] = AGENDAS;
   constructor() {}
 
   getAgendas(): Agenda[] {
-    return [
-      new Agenda('1', 'Agenda 1'),
-      new Agenda('2', 'Agenda 2'),
-      new Agenda('3', 'Agenda 3'),
-    ];
+    return this.agendas;
   }
 
   getAgenda(id: string) {
-    return this.getAgendas().find((agenda) => agenda.id === id);
+    const agenda = this.agendas.find((agenda) => agenda.id === id);
+    console.log(agenda);
+    return agenda;
   }
 }
