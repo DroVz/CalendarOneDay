@@ -1,0 +1,43 @@
+.listAgenda {
+  border-right: #ad86e0 2px solid;
+  height: 100vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  color: #37313d;
+  margin: 20px 0vw 20px 40px;
+}
+
+.card {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 300px;
+  height: 40px;
+  margin: 0.5vh 10px 0vh 0vw;
+
+  background: #9fa5ff;
+}
+
+.card:hover {
+  background: #4b2a75;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #fff;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+}
