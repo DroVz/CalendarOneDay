@@ -1,3 +1,7 @@
-<div>
-  <app-contact-card *ngFor="let contact of agenda?.contacts"></app-contact-card>
+<div class="listCard">
+  <div *ngFor="let contact of agenda?.contacts">
+    <div class="cardContact">
+      <h2>{{ contact.name }}</h2>
+    </div>
+  </div>
 </div>
