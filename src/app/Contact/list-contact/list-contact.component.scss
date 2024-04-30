@@ -1,15 +1,19 @@
 .listCard {
-  width: fit-content;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-
-  background-color: rebeccapurple;
 }
+
 .cardContact {
+  border: solid rebeccapurple 5px;
+  border-radius: 20px;
   width: 200px;
-  height: 200px;
-
-  background-color: blue;
-
+  height: 100px;
   margin: 10px;
+  padding: 10px;
+  background-color: rgb(210, 200, 219);
+}
+
+h4 {
+  margin: unset;
 }
